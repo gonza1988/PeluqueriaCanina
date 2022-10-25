@@ -106,7 +106,7 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="txtTelDuenio" max="32767" attributes="0"/>
+                              <Component id="txtCelDuenio" max="32767" attributes="0"/>
                               <Component id="txtRaza" max="32767" attributes="0"/>
                               <Component id="txtNombre" max="32767" attributes="0"/>
                               <Component id="txtNomDuenio" max="32767" attributes="0"/>
@@ -165,7 +165,7 @@
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel9" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
-                      <Component id="txtTelDuenio" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtCelDuenio" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -215,7 +215,7 @@
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel9">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Tel&#xe9;fono: "/>
+            <Property name="text" type="java.lang.String" value="Celular:"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel10">
@@ -232,7 +232,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtNomDuenio">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtTelDuenio">
+        <Component class="javax.swing.JTextField" name="txtCelDuenio">
         </Component>
         <Component class="javax.swing.JTextField" name="txtNombre">
           <Events>
@@ -292,10 +292,13 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\diskette_save_saveas_1514.png"/>
+              <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\images\diskette_save_saveas_1514.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Guardar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGuardarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnLimpiar">
           <Properties>
@@ -303,7 +306,7 @@
               <Font name="Dialog" size="18" style="0"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\3792081-broom-halloween-magic-witch_109049.png"/>
+              <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\images\3792081-broom-halloween-magic-witch_109049.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Limpiar"/>
           </Properties>
@@ -316,7 +319,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\peluCanina.png"/>
+          <Image iconType="2" name="C:\Users\GIGABYTE\Documents\Curso Java Avanzado(face)\PeluqueriaCanina\images\peluCanina.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="jLabel2"/>
       </Properties>

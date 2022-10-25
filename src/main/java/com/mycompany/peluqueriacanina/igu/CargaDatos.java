@@ -4,16 +4,18 @@
  */
 package com.mycompany.peluqueriacanina.igu;
 
+import com.mycompany.peluqueriacanina.logica.Controladora;
+
 /**
  *
  * @author GIGABYTE
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CargaDatos
-     */
+    Controladora control = new Controladora();
+    
     public CargaDatos() {
+        //control = new Controladora();
         initComponents();
     }
 
@@ -39,7 +41,7 @@ public class CargaDatos extends javax.swing.JFrame {
         txtRaza = new javax.swing.JTextField();
         txtColor = new javax.swing.JTextField();
         txtNomDuenio = new javax.swing.JTextField();
-        txtTelDuenio = new javax.swing.JTextField();
+        txtCelDuenio = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtObservaciones = new javax.swing.JTextArea();
@@ -66,7 +68,7 @@ public class CargaDatos extends javax.swing.JFrame {
 
         jLabel8.setText("Nombre Dueño: ");
 
-        jLabel9.setText("Teléfono: ");
+        jLabel9.setText("Celular:");
 
         jLabel10.setText("Observaciones: ");
 
@@ -97,11 +99,16 @@ public class CargaDatos extends javax.swing.JFrame {
         cmbAtEspecial.setToolTipText("");
 
         btnGuardar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\diskette_save_saveas_1514.png")); // NOI18N
+        btnGuardar.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\images\\diskette_save_saveas_1514.png")); // NOI18N
         btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
 
         btnLimpiar.setFont(new java.awt.Font("Dialog", 0, 18)); // NOI18N
-        btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\3792081-broom-halloween-magic-witch_109049.png")); // NOI18N
+        btnLimpiar.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\images\\3792081-broom-halloween-magic-witch_109049.png")); // NOI18N
         btnLimpiar.setText("Limpiar");
         btnLimpiar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -137,7 +144,7 @@ public class CargaDatos extends javax.swing.JFrame {
                                     .addComponent(jLabel10))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtTelDuenio)
+                            .addComponent(txtCelDuenio)
                             .addComponent(txtRaza)
                             .addComponent(txtNombre)
                             .addComponent(txtNomDuenio)
@@ -183,7 +190,7 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtTelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtCelDuenio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -195,7 +202,7 @@ public class CargaDatos extends javax.swing.JFrame {
                 .addGap(31, 31, 31))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\peluCanina.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\GIGABYTE\\Documents\\Curso Java Avanzado(face)\\PeluqueriaCanina\\images\\peluCanina.png")); // NOI18N
         jLabel2.setText("jLabel2");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -251,10 +258,27 @@ public class CargaDatos extends javax.swing.JFrame {
         txtColor.setText("");
         txtObservaciones.setText("");
         txtNomDuenio.setText("");
-        txtTelDuenio.setText("");
+        txtCelDuenio.setText("");
         cmbAlergico.setSelectedIndex(0);
         cmbAtEspecial.setSelectedIndex(0);
     }//GEN-LAST:event_btnLimpiarActionPerformed
+
+    private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+        
+        String nombreMascota = txtNombre.getText();
+        String raza = txtRaza.getText();
+        String color = txtColor.getText();
+        String observaciones = txtObservaciones.getText();
+        String alergico = (String) cmbAlergico.getSelectedItem();
+        String atEspecial = (String) cmbAtEspecial.getSelectedItem();
+        
+        String nombreDuenio = txtNomDuenio.getText();
+        String celDuenio = txtCelDuenio.getText();
+        
+        control.guardar(nombreMascota, raza, color, observaciones, alergico, atEspecial, nombreDuenio, celDuenio);
+        
+        
+    }//GEN-LAST:event_btnGuardarActionPerformed
 
    
 
@@ -275,11 +299,11 @@ public class CargaDatos extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField txtCelDuenio;
     private javax.swing.JTextField txtColor;
     private javax.swing.JTextField txtNomDuenio;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextArea txtObservaciones;
     private javax.swing.JTextField txtRaza;
-    private javax.swing.JTextField txtTelDuenio;
     // End of variables declaration//GEN-END:variables
 }
