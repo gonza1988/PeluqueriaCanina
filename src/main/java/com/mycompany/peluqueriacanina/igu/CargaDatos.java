@@ -5,6 +5,8 @@
 package com.mycompany.peluqueriacanina.igu;
 
 import com.mycompany.peluqueriacanina.logica.Controladora;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -54,7 +56,7 @@ public class CargaDatos extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 48)); // NOI18N
-        jLabel1.setText("Peluquería Canina");
+        jLabel1.setText("Carga de datos");
 
         jLabel3.setText("Nombre Mascota:");
 
@@ -150,9 +152,8 @@ public class CargaDatos extends javax.swing.JFrame {
                             .addComponent(txtNomDuenio)
                             .addComponent(txtColor)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(cmbAtEspecial, javax.swing.GroupLayout.Alignment.LEADING, 0, 124, Short.MAX_VALUE)
-                                .addComponent(cmbAlergico, javax.swing.GroupLayout.Alignment.LEADING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(cmbAtEspecial, 0, 265, Short.MAX_VALUE)
+                            .addComponent(cmbAlergico, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -277,6 +278,11 @@ public class CargaDatos extends javax.swing.JFrame {
         
         control.guardar(nombreMascota, raza, color, observaciones, alergico, atEspecial, nombreDuenio, celDuenio);
         
+        JOptionPane optionPane = new JOptionPane("Datos guardados correctamente");
+        optionPane.setMessageType(JOptionPane.INFORMATION_MESSAGE);
+        JDialog dialog = optionPane.createDialog("Guardado exitoso");
+        dialog.setAlwaysOnTop(true);
+        dialog.setVisible(true);
         
     }//GEN-LAST:event_btnGuardarActionPerformed
 
