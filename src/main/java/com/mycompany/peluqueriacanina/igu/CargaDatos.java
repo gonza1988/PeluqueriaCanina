@@ -14,10 +14,10 @@ import javax.swing.JOptionPane;
  */
 public class CargaDatos extends javax.swing.JFrame {
 
-    Controladora control = new Controladora();
+    Controladora control = null;
     
     public CargaDatos() {
-        //control = new Controladora();
+        control = new Controladora();
         initComponents();
     }
 
