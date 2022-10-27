@@ -22,26 +22,26 @@ Menú principal:
 <br><br>
 
 Carga de datos:
-<img src="images/cargaMascotas.png">
+<img src="images\cargaMascotas.png">
 <br><br>
 
 Visualización de datos:
-<img src="src\images\visualizacion.png">
+<img src="images\visualizacion.png">
 <br><br>
 
 Mensajes de alerta:
 <br>
-<img src="src\images\alerta.png">
+<img src="images\alerta.png">
 <br><br>
 
 Pantalla de edición de datos:
-<img src="src\images\edicion.png">
+<img src="images\edicion.png">
 <br><br>
 
 
 Borrado de la mascota en la base de datos:
-<img src="src\images\eliminar1.png">
-<img src="src\images\eliminar2.png">
+<img src="images\eliminar1.png">
+<img src="images\eliminar2.png">
 <br><br>
 
 ---
