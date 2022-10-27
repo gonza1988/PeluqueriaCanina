@@ -193,6 +193,12 @@ public class VerDatos extends javax.swing.JFrame {
                 //obtengo el id de la mascota a editar
                 int num_cliente = Integer.parseInt(String.valueOf(tablaMascotas.getValueAt(tablaMascotas.getSelectedRow(), 0)));
                 
+                ModificarDatos pantallaModif = new ModificarDatos(num_cliente);
+                pantallaModif.setVisible(true);
+                pantallaModif.setLocationRelativeTo(null);
+                
+                this.dispose();
+                
             } else {
                 mostrarMensaje("No seleccionó ninguna mascota", "Error", "Error al eliminar");
             }
